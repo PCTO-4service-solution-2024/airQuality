@@ -1,0 +1,164 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api Matilde</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <script src="client.js" defer></script>
+
+</head>
+<body id="body">
+
+    
+
+    <div class="container">
+        <div class="right">
+            <div class="aqi-container">
+                <div id="aqi">N</div>
+                <div class="aqi-left">
+                    <p>Air Pollution</p>
+                    <p id="aqiDesc"></p>
+                </div>
+            </div>
+
+            <div class="lower">
+                <div class="card">
+                    <div class="card-header">
+                        <p>Co</p>
+                    </div>
+                    <div class="card-body">
+                        <p id="co">N</p>
+                    </div>
+                    <div class="card-footer">
+                        <p>monossido di carbonio</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <p>No</p>
+                    </div>
+                    <div class="card-body">
+                        <p id="no">N</p>
+                    </div>
+                    <div class="card-footer">
+                        <p>monossido di azoto</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <p>No2</p>
+                    </div>
+                    <div class="card-body">
+                        <p id="no2">N</p>
+                    </div>
+                    <div class="card-footer">
+                        <p>diossido di azoto</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <p>O3</p>
+                    </div>
+                    <div class="card-body">
+                        <p id="o3">N</p>
+                    </div>
+                    <div class="card-footer">
+                        <p>ozono</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <p>So2</p>
+                    </div>
+                    <div class="card-body">
+                        <p id="so2">N</p>
+                    </div>
+                    <div class="card-footer">
+                        <p>diossito di zolfo</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <p>Pm2.5</p>
+                    </div>
+                    <div class="card-body">
+                        <p id="pm2_5">N</p>
+                    </div>
+                    <div class="card-footer">
+                        <p>particolato < 2.5 µm</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <p>Pm10</p>
+                    </div>
+                    <div class="card-body">
+                        <p id="pm10">N</p>
+                    </div>
+                    <div class="card-footer">
+                        <p>particolato < 10 µm</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <p>Nh3</p>
+                    </div>
+                    <div class="card-body">
+                        <p id="nh3">N</p>
+                    </div>
+                    <div class="card-footer">
+                        <p>ammoniaca</p>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+        <div class="left">
+            <div class="search">
+                <!--<div id="latimp">
+                    <p>Latitude</p>
+                    <input type="text" id="lat" placeholder="45.4642">
+                </div>
+                <div id="lonimp">
+                    <p>Longitude</p>
+                    <input type="text" id="lon" placeholder="9.1900">
+                </div>
+                <button id="search" onclick="input()">Search</button>-->
+                <div id="latimp">
+                    <p>Città</p>
+                    <input type="text" id="city" placeholder="Verona">
+                </div>
+                <button id="search" onclick="input2()">Search</button>
+            </div>
+
+            <div class="map-container">
+                <div id="map"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</body>
+</html>
