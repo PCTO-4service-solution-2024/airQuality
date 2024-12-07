@@ -11,7 +11,7 @@
   "description": "",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.21.1",
+    "express": "^4.21.2",
     "luxon": "^3.4.4",
     "mysql2": "^3.10.1",
     "node-fetch": "^2.7.0"

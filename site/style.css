@@ -99,8 +99,30 @@ img{
     align-items: center;
 }
 
+#latimp{
+    width: 40%;
+}
+
+#city{
+    width: 100%;
+}
+
+#coords{
+    margin-right: 5%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--grigio-chiaro);
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 0 1vh;
+}
+
 button{
     width: 10%;
+    border-radius: 15px;
 }
 
 
@@ -121,7 +143,7 @@ button{
     display: flex;
     gap: 2vh;
     flex-wrap: wrap;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 

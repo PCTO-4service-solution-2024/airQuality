@@ -1,35 +1,7 @@
 let map;
 const aqiDesc = ["Low", "Moderate", "High", "Very High", "Extreme"];
 const url = "http://127.0.0.1:3000";
-
-async function input2() {
-    const coords = getDataFromHtml();
-    console.log(coords);
-
-    creaMappa(parseFloat(coords.lat), parseFloat(coords.lon));
-    
-    const data = await requestData(coords.lat, coords.lon);
-    if(data == null){
-        alert("Error in data request");
-    }
-    console.log(data);
-    setdata(data);
-}
-
-async function input() {
-    const coords = getDataFromHtml();
-    console.log(coords);
-
-    creaMappa(parseFloat(coords.lat), parseFloat(coords.lon));
-    
-    /*const data = await requestData(coords.lat, coords.lon);
-    if(data == null){
-        alert("Error in data request");
-    }
-    console.log(data);
-    setdata(data);*/
-}
-
+let marker = null;
 async function input2() {
 
     const city = document.getElementById("city").value;
@@ -43,6 +15,7 @@ async function input2() {
         alert("Error in city request");
         return;
     }
+    document.getElementById("coords").innerHTML = `Coords: ${coords.lat}, ${coords.lon}`;
     console.log(coords);
 
     creaMappa(parseFloat(coords.lat), parseFloat(coords.lon));
@@ -86,11 +59,15 @@ function creaMappa(lat, lon) {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
     }
+    if(marker != null){
+        marker.remove();
+    }
+    marker = L.marker([lat, lon]).addTo(map); 
 }
 async function requestData(lat, lon) {
-    const url = url+`/getData/${lat}/${lon}`;
+    const url1 = url+`/getData/${lat}/${lon}`;
     try {
-        const response = await fetch(url);
+        const response = await fetch(url1);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
